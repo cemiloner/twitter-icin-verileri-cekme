@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import time
 
-bearer_token = 'AAAAAAAAAAAAAAAAAAAAAIAgzgEAAAAAfh81nH2cs6MQMTmYxaBzgcQqsO8%3DjuYg5FlOzAL7TbjVAU7k2AGAZVC4Rtt44D34n5hGV11DQQBk5d'
+bearer_token = 'ur token here'
 
 client = tweepy.Client(bearer_token=bearer_token)
 
@@ -23,5 +23,4 @@ tweets_data = pd.DataFrame(data=[tweet.text for tweet in tweets.data], columns=[
 
 tweets_data.to_excel('elonmusk_tweets.xlsx', index=False)
 
-# Print the DataFrame
 print(tweets_data)
