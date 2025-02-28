@@ -16,7 +16,7 @@ try:
     tweets = client.get_users_tweets(id=user_id, max_results=100, tweet_fields=['text'])
 except tweepy.errors.TooManyRequests:
     print("Rate limit exceeded. Waiting for 15 minutes.")
-    time.sleep(15 * 60)  # Wait for 15 minutes
+    time.sleep(15 * 60) 
     tweets = client.get_users_tweets(id=user_id, max_results=100, tweet_fields=['text'])
 
 tweets_data = pd.DataFrame(data=[tweet.text for tweet in tweets.data], columns=['Tweet'])
